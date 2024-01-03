@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        .intro {
+            margin-left: 50px;
+            margin-top: 75px;
+            margin-bottom: 100px;
+            display: flex;
+        }
+
+        .intro-content {
+            margin-left: 50px;
+            margin-top: 150px;
+            margin-right: 50px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Vanessa Young</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <h1 style="text-align: center;">About Me</h1>
+    <div class="intro">
+        <img src="Images/OwnImage.jpg" alt="OwnImage" style="width: 250px;" class="image">
+        <script>
+            var animation = anime({
+                targets: '.image',
+                translateX: 200,
+                scale: 2,
+                easing: 'easeInOutExpo',
+                direction: 'alternate',
+                duration: 2000,
+                loop: true,
+                autoplay: false
+            });
+            document.querySelector('.image').onclick = animation.play;
+        </script>
+        </script>
+        <div class="intro-content">
+            <h1 class="name">Vanessa Young</h1>
+            <h3 class="email">vanessac.y2003@gmail.com</h3>
+            <script>
+                anime({
+                    targets: '.name',
+                    translateX: 700,
+                    direction: 'alternate'
+                });
+
+                anime({
+                    targets: '.email',
+                    translateX: 700,
+                    direction: 'alternate'
+                });
+            </script>
+            <h3 class="age">years old</h3>
+            <script>
+                anime({
+                    targets: '.age',
+                    innerHTML: [0, 20], //start and end values
+                    easing: 'linear',
+                    round: 1, //rounds off to zero decimal places
+                    duration: 2000
+                });
+            </script>
+            <p>My name is Vanessa. I am currently a Year 2 student studying Digital Design & Development diploma in
+                Republic Polytechnic. Before going to poly, I have gone to ITE for 2 years. During those years in ITE, I
+                think that it help me to get a head start on the basic such as HTML and CSS</p>
+        </div>
+    </div>
+</body>
+
+</html>
